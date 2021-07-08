@@ -6,10 +6,11 @@ function Login(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const url = process.env.NODE_ENV === 'production' ? '' : 'http:localhost:3001';
 
     const handleLogin = () => {
         setError(null);
-        axios.post('http://localhost:3001/signin', 
+        axios.post(url + '/signin', 
         { email: email,
           password: password
         }).then((response) => {
