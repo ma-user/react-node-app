@@ -8,9 +8,10 @@ function Form() {
     const [email, setEmail] = useState("");
     const [address, setAddress] = useState("");
     const [users, setUsers] = useState([]);
+    const url = process.env.NODE_ENV === 'production' ? '' : 'http:localhost:3001';
 
     useEffect(() => {
-        axios.get("http://localhost:3001/form")
+        axios.get(url + '/form')
             .then((response) => {
                 if(response.data.recordset.length > 0){
                     document.getElementById('userData').style.display = 'table';
