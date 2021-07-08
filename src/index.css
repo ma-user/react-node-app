@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: cadetblue;
+  background-image: url("background.jfif");
+  color: aliceblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: xx-large;
+  line-height: 200px;
+  text-shadow: 2px 6px blue;
+}
+
+label {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+}
+
+input {
+  border-radius: 5px;
+} 
+
+#userData {
+  display: none;
+}
+
+input {
+  padding: 2mm;
+  margin-bottom: 5%;
+  height: 25px;
+  width: 250px;
+  border: none;
+  color: black;
+  background-color: aliceblue;
+  font-size: x-small;
+}
+
+input:focus {
+  background-color: rgb(163, 204, 204);
+  outline: none;
+}
+
+#button {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: x-small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: all 0.75s ease;
+}
+
+#button:hover {
+  background-color: rgb(13, 98, 172);
+}
+
+#usernameId {
+  background-color: aliceblue;
+  color: black;
+  margin-bottom: 2%;
+}
+
+#usernameId:focus {
+  background-color: rgb(163, 204, 204);
+}
+
+#mobileId {
+  background-color: aliceblue;
+  color: black;
+  margin-bottom: 2%;
+}
+
+#mobileId:focus {
+  background-color: rgb(163, 204, 204);
+}
+
+#emailId {
+  background-color: aliceblue;
+  color: black;
+  margin-bottom: 2%;
+}
+
+#emailId:focus {
+  background-color: rgb(163, 204, 204);
+}
+
+#addressId {
+  background-color: aliceblue;
+  color: black;
+  margin-bottom: 2%;
+}
+
+#addressId:focus {
+  background-color: rgb(163, 204, 204);
+}
+
+#submitBtn {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: x-small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: all 0.75s ease;
+}
+
+#submitBtn:hover {
+  background-color: rgb(13, 98, 172);
+}
+
+table, th, td {
+  margin-top: 6%;
+  width: 118.5ch;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+th {
+  height: 60px;
+  color: rgb(137, 139, 241);
+  text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
+tr {
+  height: 50px;
+  transition: all 1s ease;
+}
+
+tr:hover {
+  background-color: rgb(13, 98, 172);
+}
+
+#deleteBtn {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: x-small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: all 0.75s ease;
+}
+
+#deleteBtn:hover {
+  background-color: rgb(13, 98, 172);
+}
+
+.required::after {
+  content: "*";
+  color: red;
+}
+
+
