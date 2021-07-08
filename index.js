@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(session({
     name: //,
@@ -22,24 +23,6 @@ app.use(session({
         expires: 300000
     }
 }));
-
-const whiteList = ['http://localhost:3000', 'http://localhost:3001', 'https://user-login-form-app.herokuapp.com/']
-const corsOptions = {
-    origin: function (origin, callback) {
-        console.log("** Origin of request " + origin);
-        if(whiteList.indexOf(origin) !== -1 || !origin) {
-            console.log("Origin acceptable");
-            callback(null, true);
-        } else {
-            console.log("Origin rejected");
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    methods: ["GET", "POST", "DELETE", "OPTIONS", "PUT", "PATCH"],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}
-
-app.use(cors(corsOptions));
 
 const config = {
     user: //,
