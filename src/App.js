@@ -11,6 +11,7 @@ import './App.css';
 function App() {
 
   const [authLoading, setAuthLoading] = useState(true);
+  const url = process.env.NODE_ENV === 'production' ? '' : 'http:localhost:3001';
 
   axios.defaults.withCredentials = true;
 
@@ -19,7 +20,7 @@ function App() {
     if(!token) {
       return;
     }
-    axios.get(`http://localhost:3001/verifyToken?token=${token}`, {
+    axios.get(url + `/verifyToken?token=${token}`, {
       headers: {
         "authorization": sessionStorage.getItem("token")
       }
