@@ -24,14 +24,14 @@ function Form() {
         if (checkForm()) {
             e.preventDefault();
             document.querySelectorAll('input').forEach((input) => (input.value = ''));
-            axios.post("http://localhost:3001/users", {
+            axios.post(url + '/users', {
                 username: username,
                 mobile: mobile,
                 email: email,
                 address: address
             }).then((response) => {
                 alert("User added successfully!");
-                axios.get("http://localhost:3001/form")
+                axios.get(url + '/form')
                 .then((response) => {
                     if(response.data.recordset.length > 0) {
                         document.getElementById('userData').style.display = 'table';
@@ -43,10 +43,10 @@ function Form() {
     };
 
     const deleteUser = (id) => {
-        axios.delete(`http://localhost:3001/delete?id=${id}`)
+        axios.delete(url + `/delete?id=${id}`)
             .then((response) => {
                 alert('User deleted successfully!');
-                axios.get("http://localhost:3001/form")
+                axios.get(url + '/form')
                     .then((response) => {
                         if (response.data.recordset.length > 0) {
                             document.getElementById('userData').style.display = 'table';
