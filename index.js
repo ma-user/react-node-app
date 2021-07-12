@@ -81,7 +81,7 @@ app.post('/signin', (req, res) => {
     }
 
     if(email !== userData.email || password !== userData.password) {
-       return res.json({ error: true, message: "Username or password is wrong!" });
+       return res.json({ error: true, message: "Email or password is wrong!" });
     }
 
     const token = utils.generateToken(userData);
